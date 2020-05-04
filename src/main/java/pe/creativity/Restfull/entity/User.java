@@ -32,10 +32,12 @@ public class User {
     public User() {
     }
 
-    public User(String username, String passwd, Role role) {
+    public User(String username, String passwd, Role role, String firstName, String lastName) {
         this.passwd = passwd;
         this.username = username;
         this.role = Arrays.asList(role);
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     @ManyToMany(fetch = FetchType.EAGER)

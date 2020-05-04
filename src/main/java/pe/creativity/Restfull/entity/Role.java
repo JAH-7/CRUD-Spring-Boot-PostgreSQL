@@ -1,10 +1,12 @@
 package pe.creativity.Restfull.entity;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "security_role")
-public class Role {
+public class Role implements GrantedAuthority {
 
     @GeneratedValue
     @Id
@@ -22,6 +24,11 @@ public class Role {
     public Role(String roleName, String description) {
         this.roleName = roleName;
         this.description = description;
+    }
+
+    @Override
+    public String getAuthority() {
+        return roleName;
     }
 
 
