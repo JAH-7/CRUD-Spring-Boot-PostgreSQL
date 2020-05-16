@@ -1,4 +1,4 @@
-package pe.creativity.Restfull.Security;
+package pe.creativity.Restfull.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtParser;
@@ -11,7 +11,6 @@ import pe.creativity.Restfull.entity.Role;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Component

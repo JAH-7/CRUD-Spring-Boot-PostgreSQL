@@ -1,7 +1,6 @@
-package pe.creativity.Restfull.Security;
+package pe.creativity.Restfull.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,7 +18,6 @@ import java.util.ArrayList;
 
 import static pe.creativity.Restfull.util.Constants.HEADER_STRING;
 import static pe.creativity.Restfull.util.Constants.TOKEN_PREFIX;
-import static pe.creativity.Restfull.util.Constants.SECRET_KEY;
 
 public class JwtAutheticationTokenFilter extends UsernamePasswordAuthenticationFilter {
     /*Clase para la autenticacion de usuarios*/
