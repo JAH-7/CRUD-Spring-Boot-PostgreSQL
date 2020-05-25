@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-import static pe.creativity.Restfull.util.Constants.HEADER_STRING;
-import static pe.creativity.Restfull.util.Constants.TOKEN_PREFIX;
+import static pe.creativity.Restfull.util.ConstantsUtil.HEADER_STRING;
+import static pe.creativity.Restfull.util.ConstantsUtil.TOKEN_PREFIX;
 
 public class JwtAutheticationTokenFilter extends UsernamePasswordAuthenticationFilter {
     /*Clase para la autenticacion de usuarios*/

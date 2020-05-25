@@ -24,11 +24,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/Home").permitAll()
-                .antMatchers("/login").permitAll()
+                .antMatchers("/", "/Home","/hello/*","/v1/nota/add").permitAll()
+                .antMatchers("/login","/v1/note/add/type2","/v1/nota/get/").permitAll()
                 .antMatchers("/users/signin").permitAll()
                 .antMatchers("/users/signout").permitAll()
-                .antMatchers("/v1").authenticated()
+                .antMatchers("/v2").authenticated()
                 //no permitir a todos los demas
                 .anyRequest().authenticated()
               //  .and()    retirar

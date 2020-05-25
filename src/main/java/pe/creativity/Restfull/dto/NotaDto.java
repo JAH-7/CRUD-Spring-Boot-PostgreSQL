@@ -1,6 +1,8 @@
 package pe.creativity.Restfull.dto;
 
-public class NotaDto {
+import java.io.Serializable;
+
+public class NotaDto implements Serializable {
 
     private Long id;
 
@@ -9,6 +11,10 @@ public class NotaDto {
     private String titulo;
 
     private String contenido;
+
+    public NotaDto(){
+
+    }
 
     public NotaDto(Long id, String nombre, String titulo, String contenido) {
         this.id = id;

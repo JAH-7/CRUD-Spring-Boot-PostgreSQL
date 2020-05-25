@@ -8,10 +8,10 @@ import java.io.Serializable;
 @Table(name = "NOTA")
 @Entity
 public class Nota {
-    /*La capa de entity tambien es llamdo capa de Dominio*/
+    /*La capa de entity tambien es llamado capa de Dominio*/
     @GeneratedValue
     @Id
-    @Column(name="ID_NOTA")
+    @Column(name = "ID_NOTA")
     private Long id;
 
     @Column(name = "NOMBRE")
@@ -23,11 +23,22 @@ public class Nota {
     @Column(name = "CONTENIDO")
     private String contenido;
 
-    public Nota(){
+    public Nota() {
 
     }
-    public Nota(long id, String nombre, String titulo, String contenido) {
+
+    public Nota(Long id) {
         this.id = id;
+    }
+
+    public Nota(Long id, String nombre, String titulo, String contenido) {
+        this.id = id;
+        this.nombre = nombre;
+        this.titulo = titulo;
+        this.contenido = contenido;
+    }
+
+    public Nota(String nombre, String titulo, String contenido) {
         this.nombre = nombre;
         this.titulo = titulo;
         this.contenido = contenido;

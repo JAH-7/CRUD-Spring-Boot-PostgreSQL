@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static pe.creativity.Restfull.util.Constants.HEADER_STRING;
-import static pe.creativity.Restfull.util.Constants.TOKEN_PREFIX;
-import static pe.creativity.Restfull.util.Constants.SECRET_KEY;
+import static pe.creativity.Restfull.util.ConstantsUtil.HEADER_STRING;
+import static pe.creativity.Restfull.util.ConstantsUtil.TOKEN_PREFIX;
+import static pe.creativity.Restfull.util.ConstantsUtil.SECRET_KEY;
 
 public class JwtAuthorizationTokenFilter extends BasicAuthenticationFilter {
     /*Clase para la autorizacion de usuarios*/
