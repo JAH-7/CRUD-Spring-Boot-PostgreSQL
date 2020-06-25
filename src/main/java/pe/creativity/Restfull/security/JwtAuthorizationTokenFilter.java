@@ -1,3 +1,4 @@
+/*
 package pe.creativity.Restfull.security;
 
 import io.jsonwebtoken.Jwts;
@@ -18,7 +19,9 @@ import static pe.creativity.Restfull.util.ConstantsUtil.TOKEN_PREFIX;
 import static pe.creativity.Restfull.util.ConstantsUtil.SECRET_KEY;
 
 public class JwtAuthorizationTokenFilter extends BasicAuthenticationFilter {
-    /*Clase para la autorizacion de usuarios*/
+    */
+/*Clase para la autorizacion de usuarios*//*
+
 
     private long validityInMilliseconds;
     private String secretKey;
@@ -64,3 +67,4 @@ public class JwtAuthorizationTokenFilter extends BasicAuthenticationFilter {
 
 
 }
+*/

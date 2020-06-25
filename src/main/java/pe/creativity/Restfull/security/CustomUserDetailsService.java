@@ -1,3 +1,4 @@
+/*
 package pe.creativity.Restfull.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import pe.creativity.Restfull.repository.UserRepository;
 
 import static org.springframework.security.core.userdetails.User.withUsername;
 
+
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -18,8 +20,10 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String usernameOrEmail) throws UsernameNotFoundException {
-        /*Permita que las personas inicien sesión con nombre de usuario o correo electróni
-         */
+        */
+/*Permita que las personas inicien sesión con nombre de usuario o correo electróni
+         *//*
+
         User user = userRepository.findByUsername(usernameOrEmail).orElseThrow(() ->
                 new UsernameNotFoundException(String.format(
                         "User with name %usernameOrEmail does not exist", usernameOrEmail)));
@@ -35,3 +39,4 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
 }
+*/
