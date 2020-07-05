@@ -6,12 +6,13 @@ import pe.creativity.Restfull.entity.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Entity
 @Table(name="TBL_USER_ROLE")
-public class UserRole extends BaseEntity {
+public class UserRole extends BaseEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID= -2205599559449679190L;
 
     @Id
     @SequenceGenerator(name="SEQ_TBL_USER_ROLE", sequenceName="TBL_USER_ROLE_SEQ", allocationSize=1)

@@ -146,14 +146,14 @@ public class Person extends BaseEntity implements Serializable {
 //        this.is_able_to_transfer = is_able_to_transfer;
 //    }
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -970382247150699607L;
 
     @Id
-    @SequenceGenerator(name = "SEQ_TBL_PERSON", sequenceName = "TBL_PERSON_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_TBL_PERSON")
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name = "PERSON_ID", length = 10)
     @NotNull
-    private Long id;
+    private String id;
 
     @Column(name = "FIRST_NAME", length = 255)
     @NotNull
@@ -185,14 +185,14 @@ public class Person extends BaseEntity implements Serializable {
 
     @Column(name = "IS_ABLE_TO_TRANSFER")
     @NotNull
-    private Boolean isAbleToTransfer;
+    private Integer isAbleToTransfer;
 
     public Person() {
         // Construct default
     }
 
-    public Person(Long id, String firstName, String lastName, String phone, String email,
-                  Integer docType, String docNumber, Boolean isAbleToTransfer,
+    public Person(String id, String firstName, String lastName, String phone, String email,
+                  Integer docType, String docNumber, Integer isAbleToTransfer,
                   String countryCode) {
         super();
         this.id = id;
@@ -206,11 +206,11 @@ public class Person extends BaseEntity implements Serializable {
         this.countryCode = countryCode;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -262,11 +262,11 @@ public class Person extends BaseEntity implements Serializable {
         this.docNumber = docNumber;
     }
 
-    public Boolean getIsAbleToTransfer() {
+    public Integer getIsAbleToTransfer() {
         return isAbleToTransfer;
     }
 
-    public void setIsAbleToTransfer(Boolean isAbleToTransfer) {
+    public void setIsAbleToTransfer(Integer isAbleToTransfer) {
         this.isAbleToTransfer = isAbleToTransfer;
     }
 

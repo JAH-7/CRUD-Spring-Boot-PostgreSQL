@@ -1,8 +1,7 @@
 package pe.creativity.Restfull.entity;
 
-import org.springframework.security.core.GrantedAuthority;
-import pe.creativity.Restfull.base.BaseEntity;
 
+import pe.creativity.Restfull.base.BaseEntity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -11,7 +10,8 @@ import java.io.Serializable;
 @Table(name = "TBL_ROLE")
 public class Role extends BaseEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID= -4171400306239186884L;
+
     @Id
     @SequenceGenerator(
             name = "SEQ_TBL_ROLE",

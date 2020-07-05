@@ -1,8 +1,7 @@
 package pe.creativity.Restfull.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import pe.interbank.tunki.common.model.base.BaseEntity;
-
+import pe.creativity.Restfull.base.BaseEntity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -13,7 +12,7 @@ import java.util.List;
 @Entity
 public class User extends BaseEntity implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID= -704878186537897025L;
 
     @Id
     @Column(name = "USER_ID", length = 10)
